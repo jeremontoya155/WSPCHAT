@@ -11,14 +11,23 @@
     <h1 class="title">📱 WhatsApp Bot</h1>
     <div class="status-box">
       <p class="status-text">
-        Estado del bot: <strong class="<%= status === 'Conectado' ? 'connected' : 'disconnected' %>"><%= status %></strong>
+        Estado del bot: 
+        <strong class="<%= status === 'Conectado' ? 'connected' : 'disconnected' %>">
+          <%= status %>
+        </strong>
       </p>
     </div>
 
     <% if (status === 'Conectado') { %>
       <a href="/groups" class="button">📋 Listar Grupos</a>
     <% } else { %>
-      <p class="info">Por favor, escanea el código QR en la consola para conectar el bot.</p>
+      <p class="info">Por favor, escanea el código QR para conectar el bot:</p>
+      <% if (qrCode) { %>
+        <img src="<%= qrCode %>" alt="Código QR" class="qr-code">
+        <p class="info">Después de escanear, recarga la página para continuar.</p>
+      <% } else { %>
+        <p class="loading">Generando el código QR... Recarga si no aparece.</p>
+      <% } %>
     <% } %>
   </div>
 </body>

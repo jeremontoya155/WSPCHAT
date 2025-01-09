@@ -1,72 +1,67 @@
-/* General Styles */
+/* General */
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f3f4f6; /* Fondo suave */
-    color: #333; /* Texto principal */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
   }
   
-  /* Container */
   .container {
     text-align: center;
     padding: 20px;
-    background-color: #fff;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  /* Title */
   .title {
-    font-size: 2.5rem;
-    color: #2b8a3e; /* Verde oscuro */
+    font-size: 2rem;
     margin-bottom: 20px;
   }
   
-  /* Status Box */
   .status-box {
     margin-bottom: 20px;
   }
   
   .status-text {
     font-size: 1.2rem;
-    margin: 0;
   }
   
   .connected {
-    color: #4caf50; /* Verde de conexión */
+    color: green;
   }
   
   .disconnected {
-    color: #f44336; /* Rojo de desconexión */
+    color: red;
   }
   
-  /* Buttons */
+  .qr-code {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+    height: 250px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+  }
+  
   .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: #007bff;
     color: white;
-    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    text-decoration: none;
     font-size: 1rem;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
   
   .button:hover {
-    background-color: #45a049;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .info {
-    font-size: 0.9rem;
-    color: #666;
+    background-color: #0056b3;
   }
   
