@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/group.css">
+  <title>Grupos Disponibles</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">📋 Grupos Disponibles</h1>
+
+    <!-- Barra de búsqueda -->
+    <input
+      type="text"
+      id="searchBar"
+      placeholder="🔍 Busca un grupo..."
+      class="search-bar"
+      onkeyup="filterGroups()"
+    />
+
+    <% if (message) { %>
+      <p class="info"><%= message %></p>
+    <% } else { %>
+      <ul id="groupList" class="group-list">
+        <% groups.forEach((group) => { %>
+          <li class="group-item">
+            <div class="group-info">
+              <strong><%= group.name %></strong>
+            </div>
+            <form action="/send" method="POST" class="message-form">
+              <input
+                type="hidden"
+                name="groupId"
+                value="<%= group.id._serialized %>"
+              />
+              <input
+                type="text"
+                name="message"
+                placeholder="Escribe un mensaje"
+                class="message-input"
+              />
+              <button type="submit" class="button send-button">
+                Enviar
+              </button>
+            </form>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+
+    <!-- Botón para volver -->
+    <a href="/" class="button back-button">⬅️ Volver</a>
+  </div>
+
+  <script>
+    function filterGroups() {
+      const searchValue = document
+        .getElementById('searchBar')
+        .value.toLowerCase();
+      const groupItems = document.querySelectorAll('.group-item');
+
+      groupItems.forEach((item) => {
+        const groupName = item
+          .querySelector('.group-info strong')
+          .textContent.toLowerCase();
+        item.style.display = groupName.includes(searchValue)
+          ? 'flex'
+          : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>WhatsApp Bot</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">📱 WhatsApp Bot</h1>
+    <div class="status-box">
+      <p class="status-text">
+        Estado del bot: <strong class="<%= status === 'Conectado' ? 'connected' : 'disconnected' %>"><%= status %></strong>
+      </p>
+    </div>
+
+    <% if (status === 'Conectado') { %>
+      <a href="/groups" class="button">📋 Listar Grupos</a>
+    <% } else { %>
+      <p class="info">Por favor, escanea el código QR en la consola para conectar el bot.</p>
+    <% } %>
+  </div>
+</body>
+</html>

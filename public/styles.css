@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6; /* Fondo suave */
+    color: #333; /* Texto principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container */
+  .container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 2.5rem;
+    color: #2b8a3e; /* Verde oscuro */
+    margin-bottom: 20px;
+  }
+  
+  /* Status Box */
+  .status-box {
+    margin-bottom: 20px;
+  }
+  
+  .status-text {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .connected {
+    color: #4caf50; /* Verde de conexión */
+  }
+  
+  .disconnected {
+    color: #f44336; /* Rojo de desconexión */
+  }
+  
+  /* Buttons */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .info {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
